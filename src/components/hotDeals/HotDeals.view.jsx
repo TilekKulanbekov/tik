@@ -19,6 +19,13 @@ const HotDeals = () => {
         setIsModalOpen(false);
     };
 
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
     return (
         <div className="deals">
             <ModalWinView isOpen={isModalOpen} onClose={closeModal} />
@@ -116,7 +123,7 @@ const HotDeals = () => {
                     </div>
                 </div>
             </div>
-            <Link to={TOURS_PAGE}>
+            <Link to={TOURS_PAGE} onClick={scrollToTop}>
                 <button className="tours_btn">
                     Все туры
                 </button>

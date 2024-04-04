@@ -73,16 +73,21 @@ const TourDetailsView = () => {
                 ))}
             </div>
             <div className="tour-details__plan">
-                <h2 className="tour-details__plan-title">
-                    <span className="tour-details__plan-title-text">План</span>
-                </h2>
-                <ul className="tour-details__plan-list">
-                    {card.tourPlan.map((item, index) => (
-                        <li key={index} className="tour-details__plan-item">
-                            <span className="tour-details__plan-item-label">{item.label}</span> {item.text}
-                        </li>
-                    ))}
-                </ul>
+                {card.tourPlan && card.tourPlan.length > 0 && (
+                    <h2 className="tour-details__plan-title">
+                        <span className="tour-details__plan-title-text">План</span>
+                    </h2>
+                )}
+
+                {card.tourPlan && card.tourPlan.length > 0 && (
+                    <ul className="tour-details__plan-list">
+                        {card.tourPlan.map((item, index) => (
+                            <li key={index} className="tour-details__plan-item">
+                                <span className="tour-details__plan-item-label">{item.label}</span> {item.text}
+                            </li>
+                        ))}
+                    </ul>
+                )}
             </div>
 
             <div className="tour-details__additional-info">

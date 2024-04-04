@@ -213,3 +213,16 @@
     padding: 8px 16px;
   }
 }
+
+.logo {
+  width: 100px;
+  height: auto;
+}
+
+.green-bg .dark-logo {
+  filter: brightness(0) invert(1);
+}
+
+.dark-logo {
+  filter: none;
+}

@@ -26,6 +26,7 @@
       width: 100%;
       height: 100vh;
       overflow: hidden;
+      object-fit: cover;
 
       @media (max-width: 768px) {
         width: 100%;
@@ -104,7 +105,7 @@
   }
 
   &__info {
-    width: 97%;
+    width: 100%;
     max-height: 700px;
     height: 100%;
     margin: 100px;
@@ -121,7 +122,7 @@
       flex-direction: column;
       align-items: center;
       justify-content: center;
-      max-height: 1400px;
+      max-height: 1460px !important;
     }
 
     &-img {
@@ -359,6 +360,7 @@
 }
 
 .footerBg{
+  width: 100%;
   position: relative;
   transform: rotateX(180deg);
 

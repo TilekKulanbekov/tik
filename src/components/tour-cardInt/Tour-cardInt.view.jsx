@@ -4,6 +4,13 @@ import { Link } from 'react-router-dom';
 import {tourIntDetailsURL} from '../../utils/tourDetailsURL';
 
 const TourCardIntView = ({ id, img, fireImg, alt, title, text, tourVariant }) => {
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
     return (
         <div className="tourCard">
             <div className="tourImg">
@@ -17,7 +24,7 @@ const TourCardIntView = ({ id, img, fireImg, alt, title, text, tourVariant }) =>
             </div>
             <h2>{title}</h2>
             <p>{text}</p>
-            <Link to={tourIntDetailsURL(id)}>
+            <Link onClick={scrollToTop} to={tourIntDetailsURL(id)}>
                 <button>Подробнее</button>
             </Link>
         </div>

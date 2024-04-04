@@ -54,7 +54,7 @@ const ToursView = () => {
                 <div className="tours__title_int">
                     <h2>Туры в другие страны</h2>
                 </div>
-                <img src={GreenSvg} alt="" className="rotate"/>
+                <img src={GreenSvg} style={{width: '100%'}} alt="" className="rotate"/>
                 <div className="tour__cards_int-box">
                     {cardsInfoInternational.map((cardInt) => (
                         <TourCardIntView
@@ -69,7 +69,7 @@ const ToursView = () => {
                         />
                     ))}
                 </div>
-                <img src={GreenSvg} alt=""/>
+                <img src={GreenSvg} style={{width: '100%'}} alt=""/>
             </div>
             <div style={{marginTop: '100px'}}>
                 <FooterView/>

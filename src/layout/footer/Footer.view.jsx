@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import {ABOUT_PAGE, MAIN_PAGE, TOURS_PAGE} from '../../utils/path.js';
 import logo from '../../assets/icons/logo.svg';
+import darkLogo from '../../assets/icons/header_logo.svg'
 import './Footer.style.scss';
 import Phone from '../../assets/icons/Phone.svg';
 import Whatsapp from '../../assets/icons/Whatsapp.svg';
@@ -19,6 +20,13 @@ const FooterView = ({ greenBackground }) => {
 
     const closeModal = () => {
         setIsModalOpen(false);
+    };
+
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
     };
 
     return (
@@ -57,19 +65,18 @@ const FooterView = ({ greenBackground }) => {
                     <div className="footerPhone">
                         <h2>Телефон</h2>
                         <p>+996 501 252 353</p>
-                        <p>+996 501 252 353</p>
-                        <p>+996 501 252 353</p>
+                        <p>+996 535 975 931</p>
                     </div>
                     <div className="footerNavigation">
                         <h2>Навигация</h2>
                         <p>
-                            <Link to={MAIN_PAGE}>Главная</Link>
+                            <Link to={MAIN_PAGE} onClick={scrollToTop}>Главная</Link>
                         </p>
                         <p>
-                            <Link to={TOURS_PAGE}>Туры</Link>
+                            <Link to={TOURS_PAGE} onClick={scrollToTop}>Туры</Link>
                         </p>
                         <p>
-                            <Link to={ABOUT_PAGE}>О нас</Link>
+                            <Link to={ABOUT_PAGE} onClick={scrollToTop}>О нас</Link>
                         </p>
                     </div>
                 </div>
@@ -79,7 +86,8 @@ const FooterView = ({ greenBackground }) => {
 
             <div className="footerWrapper">
                 <Link to={MAIN_PAGE}>
-                    <img src={logo} alt="something gone wrong..." />
+                    {/*<img src={logo} className="logo dark-logo" alt="something gone wrong..." />*/}
+                    <img src={darkLogo} alt="Dark Logo" className="logo dark-logo"/>
                 </Link>
                 <p>Все права защищены © MUSAFIRUN developed by CRYNOX</p>
                 <button onClick={openModal} className="phoneBtn">

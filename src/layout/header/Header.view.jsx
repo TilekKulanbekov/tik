@@ -58,7 +58,7 @@ const HeaderView = () => {
                     <ul className="nav__list">
                         <li>
                             <Link
-                                end="true"
+                                start="true"
                                 to={MAIN_PAGE}
                                 className={location.pathname === MAIN_PAGE ? 'active' : ''}
                                 onClick={closeMenu}
@@ -84,16 +84,17 @@ const HeaderView = () => {
                                 О нас
                             </Link>
                         </li>
-                        {/*<li>*/}
-                        {/*    <LanguageSwitchButton />*/}
-                        {/*</li>*/}
-                        <li>
-                            <button className="phoneBtn" onClick={openModal}>
-                                <img src={Phone} alt="" /> Связаться
-                            </button>
-                        </li>
+                            <li>
+                                <LanguageSwitchButton />
+                            </li>
+                            <li>
+                                <button className="phoneBtn" onClick={openModal}>
+                                    <img src={Phone} alt="" /> Связаться
+                                </button>
+                            </li>
                     </ul>
                 </nav>
+
             </div>
         </div>
     );

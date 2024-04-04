@@ -8,6 +8,13 @@ import {TOURS_PAGE} from "../../utils/path.js";
 
 
 const PopularDestinations = () => {
+    const scrollToTop = () => {
+        window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+        });
+    };
+
     return (
         <div className="destination">
             <div className="destination_title">
@@ -31,7 +38,7 @@ const PopularDestinations = () => {
                             - Сопровождающий турлидер ; <br/>
                             - Бонусы компании
                     </div>
-                    <Link to={TOURS_PAGE}>
+                    <Link to={TOURS_PAGE} onClick={scrollToTop}>
                         <button className="destination_button">
                             Подробнее
                         </button>
@@ -56,7 +63,7 @@ const PopularDestinations = () => {
                         - Переезды по программе; <br/>
                         - Медицинская страховка ;
                     </div>
-                    <Link to={TOURS_PAGE}>
+                    <Link to={TOURS_PAGE} onClick={scrollToTop}>
                         <button className="destination_button">
                             Подробнее
                         </button>
@@ -79,7 +86,7 @@ const PopularDestinations = () => {
                         - Завтрак в отеле; <br/>
                         - Бонусы компании
                     </div>
-                    <Link to={TOURS_PAGE}>
+                    <Link to={TOURS_PAGE} onClick={scrollToTop}>
                         <button className="destination_button">
                             Подробнее
                         </button>
